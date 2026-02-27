@@ -8,6 +8,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body class="bg-gray-300">
@@ -17,15 +21,15 @@
         <div class="grid grid-cols-3 gap-2.5">
             <div class="bg-gray-200 p-4 rounded-md">
                 <p>Total</p>
-                <h4 class="font-bold">0</h4>
+                <h4 id="total-count" class="font-bold">0</h4>
             </div>
             <div class="bg-gray-200 p-4 rounded-md">
                 <p>Interview</p>
-                <h4 class="font-bold text-green-400">0</h4>
+                <h4 id="interview-count" class="font-bold text-green-400">0</h4>
             </div>
             <div class="bg-gray-200 p-4 rounded-md">
                 <p>Rejected</p>
-                <h4 class="font-bold text-red-400">0</h4>
+                <h4 id="rejected-count" class="font-bold text-red-400">0</h4>
             </div>
         </div>
     </header>
@@ -37,42 +41,40 @@
         </div>
 
         <!-- filter btn -->
-         <div>
-            <button 
-                class="bg-gray-200 px-3.5 rounded-sm">All</button>
-            <button 
+        <div>
+            <button id="btn-all" onclick="clickBtn('all')" class="bg-gray-200 px-3.5 rounded-sm">All</button>
+            <button id="btn-interview" onclick="clickBtn('interview')"
                 class="bg-gray-200 px-3.5 rounded-sm">Interview</button>
-            <button 
+            <button id="btn-rejected" onclick="clickBtn('rejected')"
                 class="bg-gray-200 px-3.5 rounded-sm">Rejected</button>
         </div>
 
 
-<!-- card section -->
-         <section class=" space-y-6">
+        <!-- card section -->
+        <section id="main-container" class=" space-y-6">
 
-            <div class=" space-y-6">
-
-                  <div class="flex justify-between bg-gray-200 rounded-lg p-5">
-                    <div class="space-y-4">
-                        <h4 class="company-name font-bold">Mobile First Corp</h4>
-                        <p class="position text-gray-500">React Native Developer</p>
-                        <p class="salary text-gray-500 ">Remote
-                            •
-                            Full-time
-                            •
-                            $130,000 - $175,000</p>
-                        <button class="applied-btn bg-blue-100 px-2 rounded-sm font-medium">Not Applied</button>
-                        <p class="description">Build cross-platform mobile applications using React Native. Work on
-                            products used by
-                            millions of
-                            users worldwide.</p>
-                        <div>
-                            <button
-                                class="interview-btn border-2 border-green-400 text-green-500 px-3 rounded-sm font-medium">interview</button>
-                            <button
-                                class=" rejected-btn border-2 border-red-400 text-red-500 px-3 rounded-sm font-medium">Rejected</button>
-                        </div>
+            <div id="all-container" class=" hidden bg-gray-200 rounded-lg p-5">
+                <div class=" flex justify-between">
+                   <div class="space-y-4">
+                     <h4 class="company-name font-bold">Mobile First Corp</h4>
+                    <p class="position text-gray-500">React Native Developer</p>
+                    <p class="salary text-gray-500 ">Remote
+                        •
+                        Full-time
+                        •
+                        $130,000 - $175,000</p>
+                    <button class="applied-btn bg-blue-100 px-2 rounded-sm font-medium">Not Applied</button>
+                    <p class="description">Build cross-platform mobile applications using React Native. Work on
+                        products used by
+                        millions of
+                        users worldwide.</p>
+                    <div>
+                        <button
+                            class="interview-btn border-2 border-green-400 text-green-500 px-3 rounded-sm font-medium">interview</button>
+                        <button
+                            class=" rejected-btn border-2 border-red-400 text-red-500 px-3 rounded-sm font-medium">Rejected</button>
                     </div>
+                   </div>
                     <div>
                         <span class="delete-btn border-2 border-gray-300 p-1.5 rounded-full"><i
                                 class="fa-regular fa-trash-can"></i></span>
@@ -81,7 +83,25 @@
 
             </div>
 
-         </section>
+            <section id="interview-container" class="hidden">
+                interview
+            </section>
+
+            <section id="rejected-container" class="hidden">
+                rejected
+            </section>
+
+
+        </section>
+
+
+
+        <!-- emtey -->
+        <section class=" hidden bg-gray-200 rounded-lg p-5 mb-6 text-center py-16">
+            <img class="mx-auto mb-1.5" src="./jobs.png" alt="">
+            <h4 class="font-bold">No jobs available</h4>
+            <p class="text-gray-500">Check back soon for new job opportunities</p>
+        </section>
 
     </main>
 
