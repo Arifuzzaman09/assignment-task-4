@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-4</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-    
+
+<body class="bg-gray-300">
+
+    <header class="w-[80%] mx-auto mt-12 space-y-5">
+        <h2 class="text-2xl font-bold">Job Application Tracker</h2>
+        <div class="grid grid-cols-3 gap-2.5">
+            <div class="bg-gray-200 p-4 rounded-md">
+                <p>Total</p>
+                <h4 class="font-bold">0</h4>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md">
+                <p>Interview</p>
+                <h4 class="font-bold text-green-400">0</h4>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md">
+                <p>Rejected</p>
+                <h4 class="font-bold text-red-400">0</h4>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-[80%] mx-auto mt-12 space-y-6">
+        <div class="flex justify-between">
+            <h4 class=" font-bold">Available Jobs</h4>
+            <p>8 <span>jobs</span></p>
+        </div>
+
+        <!-- filter btn -->
+         <div>
+            <button 
+                class="bg-gray-200 px-3.5 rounded-sm">All</button>
+            <button 
+                class="bg-gray-200 px-3.5 rounded-sm">Interview</button>
+            <button 
+                class="bg-gray-200 px-3.5 rounded-sm">Rejected</button>
+        </div>
+
+
+<!-- card section -->
+         <section class=" space-y-6">
+
+            <div class=" space-y-6">
+
+                  <div class="flex justify-between bg-gray-200 rounded-lg p-5">
+                    <div class="space-y-4">
+                        <h4 class="company-name font-bold">Mobile First Corp</h4>
+                        <p class="position text-gray-500">React Native Developer</p>
+                        <p class="salary text-gray-500 ">Remote
+                            •
+                            Full-time
+                            •
+                            $130,000 - $175,000</p>
+                        <button class="applied-btn bg-blue-100 px-2 rounded-sm font-medium">Not Applied</button>
+                        <p class="description">Build cross-platform mobile applications using React Native. Work on
+                            products used by
+                            millions of
+                            users worldwide.</p>
+                        <div>
+                            <button
+                                class="interview-btn border-2 border-green-400 text-green-500 px-3 rounded-sm font-medium">interview</button>
+                            <button
+                                class=" rejected-btn border-2 border-red-400 text-red-500 px-3 rounded-sm font-medium">Rejected</button>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="delete-btn border-2 border-gray-300 p-1.5 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+
+            </div>
+
+         </section>
+
+    </main>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
