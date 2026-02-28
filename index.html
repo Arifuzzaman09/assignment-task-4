@@ -53,35 +53,40 @@
         <!-- card section -->
         <section id="main-container" class=" space-y-6">
 
-            <div id="all-container" class=" hidden bg-gray-200 rounded-lg p-5">
-                <div class=" flex justify-between">
-                   <div class="space-y-4">
-                     <h4 class="company-name font-bold">Mobile First Corp</h4>
-                    <p class="position text-gray-500">React Native Developer</p>
-                    <p class="salary text-gray-500 ">Remote
-                        •
-                        Full-time
-                        •
-                        $130,000 - $175,000</p>
-                    <button class="applied-btn bg-blue-100 px-2 rounded-sm font-medium">Not Applied</button>
-                    <p class="description">Build cross-platform mobile applications using React Native. Work on
-                        products used by
-                        millions of
-                        users worldwide.</p>
-                    <div>
-                        <button
-                            class="interview-btn border-2 border-green-400 text-green-500 px-3 rounded-sm font-medium">interview</button>
-                        <button
-                            class=" rejected-btn border-2 border-red-400 text-red-500 px-3 rounded-sm font-medium">Rejected</button>
+
+
+            <section id="all-container" class=" hidden">
+
+                <div class=" card flex justify-between  bg-gray-200 rounded-lg p-5">
+                    <div class="space-y-4">
+                        <h4 class="company-name font-bold">Mobile First Corp</h4>
+                        <p class="position text-gray-500">React Native Developer</p>
+                        <p class="salary text-gray-500 ">Remote
+                            •
+                            Full-time
+                            •
+                            $130,000 - $175,000</p>
+                        <button class="applied-btn bg-blue-100 px-2 rounded-sm font-medium">Not Applied</button>
+                        <p class="description">Build cross-platform mobile applications using React Native. Work on
+                            products used by
+                            millions of
+                            users worldwide.</p>
+                        <div>
+                            <button
+                                class="interview-btn border-2 border-green-400 text-green-500 px-3 rounded-sm font-medium cursor-pointer">interview</button>
+                            <button
+                                class=" rejected-btn border-2 border-red-400 text-red-500 px-3 rounded-sm font-medium cursor-pointer">Rejected</button>
+                        </div>
                     </div>
-                   </div>
                     <div>
-                        <span class="delete-btn border-2 border-gray-300 p-1.5 rounded-full"><i
-                                class="fa-regular fa-trash-can"></i></span>
+                        <button
+                            class="delete-btn border-2 border-gray-300 p-1.5 rounded-full cursor-pointer bg-red-400"><i class="fa-regular fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
 
-            </div>
+            </section>
+
+
 
             <section id="interview-container" class="hidden">
                 interview
